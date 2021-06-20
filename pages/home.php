@@ -61,7 +61,8 @@
                   </table>';
                 echo $html;
 	}else if($level == 2) {
-		$html = '			<div class="card shadow mb-4">
+		$html = '			
+    <div class="card shadow mb-4">
 			  <div class="card-header py-3">
 			      <h6 class="m-0 font-weight-bold text-primary">Table Property Rumah Anda</h6> 
 			  </div>
@@ -82,7 +83,7 @@
                       $perintah = " 
                         SELECT * FROM tb_user 
                         JOIN tb_produk ON tb_user.id=tb_produk.id_pemilik 
-                        ";
+                        WHERE id = '$id'";
                       $dataw = mysqli_query($conn, $perintah);
                       while ($data = mysqli_fetch_array($dataw)) {
                         if ($data['status_agen']=='0') {

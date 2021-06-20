@@ -215,6 +215,10 @@ include '../koneksi/db.php';
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="?page=agen&aksi=edit-profile&id=<?php echo $data['id'] ?>">
+                                    <i class="fa fa-cog fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Edit Profile
+                                </a>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
@@ -250,6 +254,8 @@ include '../koneksi/db.php';
                                     include "agen-rincian.php";
                                   }else if ($aksi == "delete") {
                                     include "agen-delete.php";
+                                  }else if ($aksi == "edit-profile") {
+                                    include "edit-profile.php";
                                   }
                                 }else if ($page == "property") {
                                   if ($aksi == "view") {

@@ -17,7 +17,7 @@
 						<div class="wrapper row p-2">
 							<div class="preview col-md-6">
 								<div class="preview-pic tab-content">
-								  <div class="tab-pane active" id="pic-1"><img src="assets/img/agen/agen-1.png" /></div>
+								  <div class="tab-pane active" id="pic-1"><img src="assets/img/upload/profile/<?php echo $data['image'] ?>" /></div>
 								</div>
 							</div>
 							
@@ -84,7 +84,7 @@
 													<div class="card">
 													  	<div class="row g-0 rounded-3">
 													    	<div class="col-md-4">
-													     	 	<img src="assets/img/cont/exrumah.png" style="width: 100%">
+													     	 	<img src="assets/img/upload/<?php echo $data['foto'] ?>" style="width: 100%">
 													    	</div>
 													    	<div class="col-md-8">
 													    		<a href="" class="nav-link item-list">
@@ -130,7 +130,7 @@
 													<div class="card">
 													  	<div class="row g-0 rounded-3">
 													    	<div class="col-md-4">
-													     	 	<img src="assets/img/cont/exrumah.png" style="width: 100%">
+													     	 	<img src="assets/img/upload/<?php echo $data['foto'] ?>" style="width: 100%">
 													    	</div>
 													    	<div class="col-md-8">
 													    		<a href="" class="nav-link item-list">

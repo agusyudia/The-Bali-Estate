@@ -30,7 +30,7 @@
                       $perintah = " 
                         SELECT * FROM tb_user 
                         JOIN tb_produk ON tb_user.id=tb_produk.id_agen 
-                         where status_agen=0 or status_agen=1";
+                        where status_agen=0 or status_agen=1";
                       $dataw = mysqli_query($conn, $perintah);
                       while ($data = mysqli_fetch_array($dataw)) {
                         if ($data['status_agen']=='0') {

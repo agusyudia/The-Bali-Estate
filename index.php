@@ -81,12 +81,7 @@
 					<div class="row">
 						<div class="col-lg-6 pt-4 pb-4 p-4">
 							<h1>THE BALI ESTATE</h1>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<p>The Bali Estate menyediakan Listing Eksklusif Rumah Dijual Di Bali dan Villa Dijual di Bali. Telah berpengalaman di bidang agen properti sejak 2011, saya akan membantu anda untuk menjualkan villa lokasi strategis di Bali dengan harga terbaik.</p>
 							<form>
 							<div class="form-row d-flex">
 								<div class="input-group flex-fill me-3">

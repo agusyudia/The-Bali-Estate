@@ -13,7 +13,7 @@ if(isset($_POST['submit'])) {
     $jml_kamar 	= $_POST['jml_kamar'];
     $jml_wc 	= $_POST['jml_wc'];
     $status 	= $_POST['status'];
-    $id_agen 		= $_SESSION['login'];
+    $id_agen 		= $_POST['id_agen'];
     $harga 			= $_POST['harga'];
 
 	if (empty($nama_pemilik)||empty($judul)||empty($lokasi)||empty($jenis_property)||empty($sertifikat)||empty($imb)||empty($ket_produk)||empty($luas)||empty($surat_tanah)||empty($jml_kamar)||empty($jml_wc)||empty($status)||empty($id_agen)||empty($harga)) {
@@ -58,7 +58,6 @@ if(isset($_POST['submit'])) {
       </div>
 	<form class="p-3" action="" method="post" enctype="multipart/form-data">
 		<div class="form-group">
-		    <label for="exampleFormControlSelect1">Nama Pemilik</label>
 		    <?php
 				include '../koneksi/db.php';
 				$id = $_SESSION['login'];
@@ -66,7 +65,7 @@ if(isset($_POST['submit'])) {
                 $dataw = mysqli_query($conn, $perintah);
                 $data = mysqli_fetch_array($dataw);
             ?>
-      	<input type="text" class="form-control" id="ticket-email" placeholder="agen" name="nama_pemilik" value="<?php echo $data['nama'] ?>" readonly>
+      	<input type="text" class="form-control" id="ticket-email" placeholder="agen" name="nama_pemilik" value="<?php echo $data['id'] ?>" hidden>
 		</div>
 		<div class="form-group">
 		    <label>Judul</label>
@@ -168,9 +167,9 @@ if(isset($_POST['submit'])) {
 						include '../koneksi/db.php';
                         $perintah = "SELECT * FROM tb_user WHERE level='1'";
                         $dataw = mysqli_query($conn, $perintah);
-                         while ($data = mysqli_fetch_array($dataw)) {
+                         while ($data2 = mysqli_fetch_array($dataw)) {
                         ?>
-                            <option value="<?php echo $data['id']; ?>"><?php echo $data['nama'];?></option>
+                            <option value="<?php echo $data2['id']; ?>"><?php echo $data2['nama'];?></option>
 
                         <?php } ?>
 	          </select>

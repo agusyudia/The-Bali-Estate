@@ -31,7 +31,7 @@
                     			?>
                     			<div class="col-lg-3 p-2">
 									<div class="card text-center">
-									  	<img class="card-img-top" src="assets/img/agen/agen-1.png" alt="Card image cap" style="max-height: 300px !important;">
+									  	<img class="card-img-top" src="assets/img/upload/profile/<?php echo $data['image'] ?>" alt="Card image cap" style="max-height: 300px !important;">
 									 	<div class="card-body">
 									    	<h5 class="card-title blue"><?php echo $data['nama']; ?></h5>
 									 	</div>
@@ -63,7 +63,7 @@
 		                  ?>
 							<div class="col-lg-3 p-2">
 								<div class="card text-center">
-								  	<img class="card-img-top" src="assets/img/agen/agen-1.png" alt="Card image cap" style="max-height: 300px !important;">
+								  	<img class="card-img-top" src="assets/img/upload/profile/<?php echo $data['image'] ?>" alt="Card image cap" style="max-height: 300px !important;">
 								 	<div class="card-body">
 								    	<h5 class="card-title blue"><?php echo $data['nama']; ?></h5>
 								 	</div>

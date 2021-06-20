@@ -79,12 +79,7 @@
 			</div>
 			<div class="col-lg-6 pt-4">
 				<h1 class="pt-4">Kita Memberikan Sesuatu yang bagus</h1>
-				<p class="pt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p class="pt-4">The Bali Estate menyediakan Listing Eksklusif Rumah Dijual Di Bali dan Villa Dijual di Bali. Telah berpengalaman di bidang agen properti sejak 2011, saya akan membantu anda untuk menjualkan villa lokasi strategis di Bali dengan harga terbaik.</p>
 				<a href="#" class="btn btn-register justify-content-end" style="width: 150px;">Selengkapnya...</a>
 			</div>
 		</div>
@@ -98,22 +93,22 @@
 					<div class="col-lg-4 p-3 rounded-3">
 						<div class="p-4 card">
 							<span class="icon fa fa-home orange"></span>
-							<h3>Home For Families</h3>
-							<p>Rent a beautiful home for your family Chose from flats is societies and individual apartments</p>
+							<h3>Rumah Untuk Keluarga</h3>
+							<p>Membeli rumah dengan kami , pasti kami akan memberikan pilihan yang terbaik untuk keluarga anda.</p>
 						</div>
 					</div>
 					<div class="col-lg-4 p-3 rounded-3">
 						<div class="p-4 card">
 							<span class="icon fa fa-briefcase blue"></span>
-							<h3>Home For Bachelor</h3>
-							<p>Rent a beautiful home for your family Chose from flats is societies and individual apartments</p>
+							<h3>Rumah Untuk Pekerja Keras</h3>
+							<p>Menyewa atau Membeli rumah untuk melakukan hal setelah bekerja bisa kami pilihkan </p>
 						</div>
 					</div>
 					<div class="col-lg-4 p-3 rounded-3">
 						<div class="p-4 card">
 							<span class="icon fa fa-link green"></span>
-							<h3>Networking</h3>
-							<p>Rent a beautiful home for your family Chose from flats is societies and individual apartments</p>
+							<h3>Rumah untuk investasi</h3>
+							<p>Membeli rumah untuk cucu atau untuk di jual kembali itu kami untuk bergabung dengan kami.</p>
 						</div>
 					</div>
 			</div>

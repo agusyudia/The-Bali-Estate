@@ -1,4 +1,13 @@
+<?php
+	session_start();
+	include 'koneksi/db.php';
+	$id = $_GET["id"];
+  	$perintah = "
+  	SELECT * FROM tb_user WHERE id = '$id'";
 
+  	$dataw = mysqli_query($conn, $perintah);
+  	$data = mysqli_fetch_array($dataw);
+ ?>
 <div class="container-fluid content bg-abu">
 		<div class="container">
 			<div class="row p-4">
@@ -13,22 +22,26 @@
 							</div>
 							
 							<div class="details col-md-6">
-								<h3 class="product-title">I Putu Agus Yudi Artawan</h3>
+								<h3 class="product-title"><?php echo $data['nama'];?></h3>
 								<p class="product-description">Konsultan properti yang berpengalaman di bidang ini.Saya siap membantu Bapak dan Ibu tidak hanya untuk mempunyai tempat tinggal idaman untuk keluarga tersayang maupun untuk usaha, tetapi juga menjualkan property anda.Bila butuh informasi tentang properti, baik apartemen, rumah, gedung, ruko, pabrik, gudang, tanah, lahan industri/komersial dll, silahkan menghubungi saya di nomor tlp/ whatsapp :
-								<p>081236246911</p>
+								<p><?php echo $data['no_tlp'];?></p>
 								<br>
 								Saya siap membantu anda.<br>
 								Terima kasih</p>
 								<h4>Agen Wilayah</h4>
-								<h5><span class="fa fa-map blue"></span> Bali</h5>
+								<h5><span class="fa fa-map blue"></span> <?php echo $data['alamat'];?></h5>
 							</div>
 						</div>
 					</div>
+
+
 					<div class="row p-4 d-flex bd-highlight mb-3">
 						<h1>Detail Penjualan</h1>
 						<div class="btn-group col-4 bd-highlight" role="group" aria-label="Basic example">
-						  	<button type="button" class="btn btn-success">Dijual</button>
-						  	<button type="button" class="btn btn-success">Terjual</button>
+							<form action="" method="post">
+							  	<button type="submit" class="btn btn-success" name="dijual">Dijual</button>
+							  	<button type="submit" class="btn btn-success" name="terjual">Terjual</button>
+							</form>
 						</div>
 						<div class="col-8 ms-auto bd-highlight">
 							<div class="form-group col-4">
@@ -44,98 +57,102 @@
 					</div>
 					<div class="row p-3">
 						<div class="table-responsive">
-							<div class="col-lg-8 pt-2">
-								<div class="card">
-								  	<div class="row g-0 rounded-3">
-								    	<div class="col-md-4">
-								     	 	<img src="assets/img/cont/exrumah.png" style="width: 100%">
-								    	</div>
-								    	<div class="col-md-8">
-								    		<a href="" class="nav-link item-list">
-									      		<div class="card-body p-0 ps-2 pt-2 p-1">
-									        		<h5 class="card-title"><b>Rumah Dalung</b></h5>
-									        		<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-									        		<p class="card-text">
-									        			<span class="bg-green-card pt-1 pb-1 ps-3 pe-3">House</span>
-									        			<span class="bg-red-card pt-1 pb-1 ps-3 pe-3">Spesial</span>
-									        			<span class="bg-blue-card pt-1 pb-1 ps-3 pe-3">Dic 30%</span>
-									        		</p>
-									        		<p class="card-text">Rp. 100.000.000.000</p>
-									      		</div>
-								      		</a>
-								    	</div>
-								  	</div>
-								</div>
-							</div>
-							<div class="col-lg-8 pt-2">
-								<div class="card">
-								  	<div class="row g-0 rounded-3">
-								    	<div class="col-md-4">
-								     	 	<img src="assets/img/cont/exrumah.png" style="width: 100%">
-								    	</div>
-								    	<div class="col-md-8">
-								    		<a href="" class="nav-link item-list">
-									      		<div class="card-body p-0 ps-2 pt-2 p-1">
-									        		<h5 class="card-title"><b>Rumah Dalung</b></h5>
-									        		<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-									        		<p class="card-text">
-									        			<span class="bg-green-card pt-1 pb-1 ps-3 pe-3">House</span>
-									        			<span class="bg-red-card pt-1 pb-1 ps-3 pe-3">Spesial</span>
-									        			<span class="bg-blue-card pt-1 pb-1 ps-3 pe-3">Dic 30%</span>
-									        		</p>
-									        		<p class="card-text">Rp. 100.000.000.000</p>
-									      		</div>
-								      		</a>
-								    	</div>
-								  	</div>
-								</div>
-							</div>
-							<div class="col-lg-8 pt-2">
-								<div class="card">
-								  	<div class="row g-0 rounded-3">
-								    	<div class="col-md-4">
-								     	 	<img src="assets/img/cont/exrumah.png" style="width: 100%">
-								    	</div>
-								    	<div class="col-md-8">
-								    		<a href="" class="nav-link item-list">
-									      		<div class="card-body p-0 ps-2 pt-2 p-1">
-									        		<h5 class="card-title"><b>Rumah Dalung</b></h5>
-									        		<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-									        		<p class="card-text">
-									        			<span class="bg-green-card pt-1 pb-1 ps-3 pe-3">House</span>
-									        			<span class="bg-red-card pt-1 pb-1 ps-3 pe-3">Spesial</span>
-									        			<span class="bg-blue-card pt-1 pb-1 ps-3 pe-3">Dic 30%</span>
-									        		</p>
-									        		<p class="card-text">Rp. 100.000.000.000</p>
-									      		</div>
-								      		</a>
-								    	</div>
-								  	</div>
-								</div>
-							</div>
-							<div class="col-lg-8 pt-2">
-								<div class="card">
-								  	<div class="row g-0 rounded-3">
-								    	<div class="col-md-4">
-								     	 	<img src="assets/img/cont/exrumah.png" style="width: 100%">
-								    	</div>
-								    	<div class="col-md-8">
-								    		<a href="" class="nav-link item-list">
-									      		<div class="card-body p-0 ps-2 pt-2 p-1">
-									        		<h5 class="card-title"><b>Rumah Dalung</b></h5>
-									        		<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-									        		<p class="card-text">
-									        			<span class="bg-green-card pt-1 pb-1 ps-3 pe-3">House</span>
-									        			<span class="bg-red-card pt-1 pb-1 ps-3 pe-3">Spesial</span>
-									        			<span class="bg-blue-card pt-1 pb-1 ps-3 pe-3">Dic 30%</span>
-									        		</p>
-									        		<p class="card-text">Rp. 100.000.000.000</p>
-									      		</div>
-								      		</a>
-								    	</div>
-								  	</div>
-								</div>
-							</div>
+							<?php
+							include 'koneksi/db.php';
+							if (isset($_POST['terjual'])) {
+								$perintah = "SELECT * FROM tb_user 
+								  	JOIN tb_produk ON tb_user.id = tb_produk.id_agen
+								  	where tb_user.id= '$id' AND status_agen='2'";
+			                    	$query = mysqli_query($conn, $perintah);
+		                    	if (mysqli_num_rows($query) > 0) {
+		                    		foreach ($query as $data ) {
+				                    	$angka=$data['harga'];
+										$hasil_rupiah = "Rp " . number_format($angka,2,',','.');
+		                    			if ($data['jenis_property']=='1') {
+									  		$datapro='Rumah';
+									  	}else if ($data['jenis_property']=='2') {
+									  		$datapro='Villa';
+									  	}else if ($data['jenis_property']=='3') {
+									  		$datapro='Tanah';
+									  	}else if ($data['jenis_property']=='4') {
+									  		$datapro='Apartment';
+									  	}else{
+									  		$datapro='Hotel';
+									  	}
+			                    			?>
+												<div class="col-lg-8 pt-2">
+													<div class="card">
+													  	<div class="row g-0 rounded-3">
+													    	<div class="col-md-4">
+													     	 	<img src="assets/img/cont/exrumah.png" style="width: 100%">
+													    	</div>
+													    	<div class="col-md-8">
+													    		<a href="" class="nav-link item-list">
+														      		<div class="card-body p-0 ps-2 pt-2 p-1">
+														        		<h5 class="card-title"><b><?php echo $data['judul']?></b></h5>
+														        		<p class="card-text"><?php echo $data['ket_produk']?></p>
+														        		<p class="card-text">
+														        			<span class="bg-green-card pt-1 pb-1 ps-3 pe-3"><?php echo $datapro ?></span>
+														        		</p>
+														        		<p class="card-text"><?php echo $hasil_rupiah?></p>
+														      		</div>
+													      		</a>
+													    	</div>
+													  	</div>
+													</div>
+												</div>
+											<?php
+								}
+							}
+						}else {
+							
+								$perintah = "SELECT * FROM tb_user 
+								  	JOIN tb_produk ON tb_user.id = tb_produk.id_agen
+								  	where tb_user.id= '$id' AND status_agen='1'";
+			                    	$query = mysqli_query($conn, $perintah);
+		                    	if (mysqli_num_rows($query) > 0) {
+		                    		foreach ($query as $data ) {
+				                    	$angka=$data['harga'];
+										$hasil_rupiah = "Rp " . number_format($angka,2,',','.');
+		                    			if ($data['jenis_property']=='1') {
+									  		$datapro='Rumah';
+									  	}else if ($data['jenis_property']=='2') {
+									  		$datapro='Villa';
+									  	}else if ($data['jenis_property']=='3') {
+									  		$datapro='Tanah';
+									  	}else if ($data['jenis_property']=='4') {
+									  		$datapro='Apartment';
+									  	}else{
+									  		$datapro='Hotel';
+									  	}
+			                    			?>
+												<div class="col-lg-8 pt-2">
+													<div class="card">
+													  	<div class="row g-0 rounded-3">
+													    	<div class="col-md-4">
+													     	 	<img src="assets/img/cont/exrumah.png" style="width: 100%">
+													    	</div>
+													    	<div class="col-md-8">
+													    		<a href="" class="nav-link item-list">
+														      		<div class="card-body p-0 ps-2 pt-2 p-1">
+														        		<h5 class="card-title"><b><?php echo $data['judul']?></b></h5>
+														        		<p class="card-text"><?php echo $data['ket_produk']?></p>
+														        		<p class="card-text">
+														        			<span class="bg-green-card pt-1 pb-1 ps-3 pe-3"><?php echo $datapro ?></span>
+														        		</p>
+														        		<p class="card-text"><?php echo $hasil_rupiah?></p>
+														      		</div>
+													      		</a>
+													    	</div>
+													  	</div>
+													</div>
+												</div>
+											<?php
+								}
+							}
+						}
+							?>
+
 							<div class="row p-4">
 								<nav aria-label="Page navigation">
 								  	<ul class="pagination">

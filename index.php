@@ -50,7 +50,7 @@
 		<div class="container-fluid">
 			<?php 
                 include 'koneksi/db.php';
-                error_reporting(0);
+                //error_reporting(0);
                 $page = $_GET['page'];
                 $aksi = $_GET['aksi'];    
                         if ($page == "index") {

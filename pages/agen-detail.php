@@ -16,7 +16,7 @@
         <h6 class="m-0 font-weight-bold text-primary">Detail Agen</h6> 
     </div>
     <div class="card-body">
-		<form class="row g-3">>
+		<form class="row g-3">
 		  <div class="col-md-6">
 		    <label for="inputEmail4" class="form-label">Nama</label>
 		    <input class="form-control" id="inputEmail4" value="<?php echo $data['nama']; ?>">

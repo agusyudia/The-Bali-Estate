@@ -88,6 +88,7 @@ include '../koneksi/db.php';
                 else if ($data['level']==1)
                 {
                   echo'
+
                         <!-- Nav Item - Pages Collapse Menu -->
                         <li class="nav-item">
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
@@ -108,6 +109,7 @@ include '../koneksi/db.php';
                                 </div>
                             </div>
                         </li>
+                        <li class="nav-item"><a class="nav-link" href="?page=property&aksi=cetak"><i class="fas fa-fw fa-clipboard"></i><span>Laporan</span></a></li>
                   ';
                 }
                 else 
@@ -264,6 +266,8 @@ include '../koneksi/db.php';
                                     include "property-validasi.php";
                                   }else if ($aksi == "bukti") {
                                     include "property-bukti.php";
+                                  }else if ($aksi == "cetak") {
+                                    include "property-laporan.php";
                                   }
                                 }else if ($page == "pemilik") {
                                   if ($aksi == "view") {

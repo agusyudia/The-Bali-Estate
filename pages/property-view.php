@@ -64,7 +64,6 @@
                 echo $html;
               }else if ($level == 1){
               $html = '
-                    <a href="?page=property&aksi=input" class="btn btn-success"><span class="fa fa-plus"></span> Tambah Property Rumah</a>
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
@@ -81,7 +80,7 @@
                       $perintah = " 
                         SELECT * FROM tb_user 
                         JOIN tb_produk ON tb_user.id=tb_produk.id_agen 
-                         where status_agen=0";
+                         where tb_user.id='$id' AND status_agen=0";
                       $dataw = mysqli_query($conn, $perintah);
                       while ($data = mysqli_fetch_array($dataw)) {
                         if ($data['status_agen']=='0') {
